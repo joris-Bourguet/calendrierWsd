@@ -1,3 +1,17 @@
+
+.tr{
+    border: 1px solid black !important;
+}
 td{
-    border: 1px solid black
+    border: 1px solid black !important;
+}
+
+.Ouvert{
+    background-color: green;
+}
+.Ferme{
+    background-color: grey;
+}
+.Reserve{
+    background-color: red;
 }
