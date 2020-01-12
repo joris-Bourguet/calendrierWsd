@@ -12,7 +12,7 @@ $(document).ready(function () {
                 if (index == 0) {
                     htmlLigne += "<td>" + Heures[j] + "</td>"
                 } else {
-                    htmlLigne += "<td> </td>"
+                    htmlLigne += "<td></td>"
                 }
             }
             htmlLigne += "</tr>"
@@ -21,15 +21,14 @@ $(document).ready(function () {
     }
     // Creation des jours (thead)
     let Jours = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
-    
-
-    let AfficheJours = function (Jours, index) {
+    // Afficher les jours et la jj/mm du jours
+    let AfficheJours = function (Jours) {
         let htmlJours = "<th>Heures</th>"
         let dateAjd = new Date('August 30, 1975 23:15:30')
         let dateDuJours = new Date()
         Jours.forEach((nomJours, index) => {
             dateDuJours.setDate(dateAjd.getDay() + index)
-            htmlJours += "<th>" + nomJours + " " + dateDuJours.getDate() + "/" + (dateDuJours.getMonth()+1)  + " </th>"
+            htmlJours += "<th>" + nomJours + " " + dateDuJours.getDate() + "/" + (dateDuJours.getMonth() + 1) + " </th>"
         });
         return htmlJours
     }
